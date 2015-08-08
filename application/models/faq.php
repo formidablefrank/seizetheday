@@ -13,7 +13,7 @@ class Faq extends CI_Model {
     }
 
     function searchFaq($query){
-        return $this->db->query("SELECT * FROM faqs WHERE faq_question LIKE '%$query%'");
+        return $this->db->query("SELECT * FROM faqs WHERE faq_question LIKE '%$query%' OR faq_question LIKE '%query%'");
     }
 }
 ?>

@@ -36,12 +36,6 @@
 		<input placeholder="Type keywords here..." type="text" id="queryText">
 		<i class="search icon"></i>
 	</div>
-
-	<!-- list of questions -->
-	<!-- <div class="ui result segment">
-		<h4 class="ui header">Question One</h4>
-		<p>Question description.</p>
-	</div> -->
 </div>
 
 <!-- temporary page fillers -->
@@ -87,7 +81,9 @@ $(document).ready(function(){
 				dataType: "json",
 				success: function(results){
 					$("#queryText").parent().removeClass("loading");
+					//remove all old search results first
 					$('div .result').remove();
+					//for each new search result found, allocate a box for them
 					for (var i = results.length - 1; i >= 0; i--) {
 						$("<div class='ui result segment'>" + "<h4 class='ui header'>" + results[i].faq_question + "</h4><p>" + results[i].faq_answer + "</p></div>").insertAfter('div .input');
 					};

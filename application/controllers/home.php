@@ -26,17 +26,24 @@ class Home extends CI_Controller {
 	}
 
 	public function identify($qnum = NULL, $ans = NULL){
+		//if not first time to answer the survey, put answers in the db
 		if($qnum != NULL && $ans != NULL){
 			$this->question->putAnswer($qnum, $ans, 1);
 		} else {
+			//make the system get the first question
 			$qnum = 0;
 			$ans = 0;
 		}
+
+		//the next question depends on the questions already answered
 		$qnum = $this->question->evalQuestion($qnum, $ans);
+
+		//if the system has already identified the sickness, redirect to results and recommendations
 		if(!is_integer($qnum)) {
 			redirect(base_url("home/result/$qnum"));
 		}
 		else {
+			//get the next recommended question and possible choices
 			$data['question'] = $this->result_table($this->question->getQuestion($qnum))[0];
 			$data['choices'] = $this->result_table($this->question->getChoices($qnum));
 			$this->load->view('templates/header');
@@ -64,6 +71,7 @@ class Home extends CI_Controller {
 	public function result($res){
 		$data['result'] = $res;
 		$data['description'] = 'yee';
+
 		$this->load->view('templates/header');
 		$this->load->view('result', $data);
 		$this->load->view('templates/footer');
