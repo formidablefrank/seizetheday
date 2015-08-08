@@ -8,3 +8,5 @@ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 <p>Are you male or female?</p>
 <p>Email:</p>
+
+<script type="text/javascript" src="<?php echo site_url('js/map.js'); ?>"></script>
