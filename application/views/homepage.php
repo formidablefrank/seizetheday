@@ -4,9 +4,12 @@
 	<div class="ui large secondary menu">
 		<div class="ui container">
 			<div class="item">
-				<h1><i class="heart icon"></i> Seize the Day</h1>
+				<i class="heart icon"></i> Seize the Day
 			</div>
-			<div class="item">
+			<div class="right menu">
+				<div class="item">
+					Social links
+				</div>
 			</div>
 		</div>
 	</div>
@@ -15,62 +18,85 @@
 	<div id="quick-links" class="ui stackable centered grid container">
 		<div class="five wide column">
 			<div class="ui centered grid container">
-				<div class="fourteen wide column">
+				<div class="ten wide mobile fourteen wide column">
 					<img class="ui fluid image" src="<?php echo base_url('img/connect.svg'); ?>">
-					<button class="fluid ui huge black button">Connect</button>
+					<br><br>
+					<a href="connect" class="fluid ui huge basic black button">Connect</a>
 				</div>
 			</div>
 		</div>
 		<div class="five wide column">
-				<div class="ui card">
-					<div class="ui fade reveal image">
-						<img src="img/Forever.png" class="visible content">
-						<img src="/images/avatar/large/elliot.jpg" class="hidden content">
-					</div>
-					<div class="content">
-						<div class="ui center aligned container">
-							<a class="header">Seek</a>
-						</div>
-					</div>
+			<div class="ui centered grid container">
+				<div class="ten wide mobile fourteen wide column">
+					<img class="ui fluid image" src="<?php echo base_url('img/study.svg'); ?>">
+					<br><br>
+					<a href="study" class="fluid ui huge basic black button">Study</a>
 				</div>
+			</div>
 		</div>
 		<div class="five wide column">
-				<div class="ui card">
-					<div class="ui fade reveal image">
-						<img src="img/Forever.png" class="visible content">
-						<img src="/images/avatar/large/elliot.jpg" class="hidden content">
-					</div>
-					<div class="content">
-						<div class="ui center aligned container">
-							<a class="header">Identify</a>
-						</div>
-					</div>
+			<div class="ui centered grid container">
+				<div class="ten wide mobile fourteen wide column">
+					<img class="ui fluid image" src="<?php echo base_url('img/identify.svg'); ?>">
+					<br><br>
+					<a href="identify" class="fluid ui huge basic black button">Identify</a>
 				</div>
+			</div>
 		</div>
 	</div>
 </div>
 
 <!-- feature overview and description -->
-<div class="ui fluid container">
-	<div class="ui container">
-		<h2>Feature 1</h2>
-		<p>Overview</p>
+<div id="homepage-subhead-identify" class="homepage-subhead">
+	<div class="ui grid container">
+		<div class="ten wide column">
+			<h1>Identify</h1>
+			<p>Minions ipsum wiiiii bappleees bananaaaa butt me want bananaaa!
+			La bodaaa. Bee do bee do bee do jiji jeje po kass jiji poopayee gelatooo.
+			Daa daa tank yuuu! Bappleees baboiii hahaha jeje me want bananaaa! Tank yuuu!</p>
+		</div>
+		<div class="six wide column">
+		</div>
 	</div>
 </div>
 
-<div class="ui fluid container">
-	<div class="ui container">
-		<div class="ui divider"></div>
-		<h2>Feature 2</h2>
-		<p>Overview</p>
+<div id="homepage-subhead-study" class="homepage-subhead">
+	<div class="ui grid container">
+		<div class="six wide column">
+		</div>
+		<div class="ten wide column">
+			<h1>Study</h1>
+			<p>Minions ipsum butt bananaaaa jeje daa aaaaaah potatoooo hahaha.
+			Belloo! baboiii bee do bee do bee do pepete poopayee. Belloo! la bodaaa butt pepete.
+			Wiiiii belloo! Bee do bee do bee do daa. Tulaliloo uuuhhh gelatooo daa chasy
+			tatata bala tu uuuhhh bee do bee do bee do aaaaaah.</p>
+		</div>
+	</div>
+</div>
+<div id="homepage-subhead-connect" class="homepage-subhead">
+	<div class="ui grid container">
+		<div class="ten wide column">
+			<h1>Connect</h1>
+			<p>Minions ipsum me want bananaaa! Chasy ti aamoo!
+			Tatata bala tu gelatooo po kass bananaaaa wiiiii.
+			Uuuhhh hana dul sae bappleees bee do bee do bee do ti aamoo! Pepete poulet tikka masala.
+			Tatata bala tu bee do bee do bee do hana dul sae pepete bappleees
+			uuuhhh poulet tikka masala chasy. Tulaliloo daa pepete hana dul sae tulaliloo poopayee.</p>
+		</div>
+		<div class="six wide column">
+		</div>
 	</div>
 </div>
 
-<div class="ui fluid container">
-	<div class="ui container">
+<div id="homepage-footer">
+	<div class="ui center aligned text container">
+		<span class="heading csi">UP<b>CSI</b></span>
+		<span class="heading ah"><b>AngelHacks 2015</b></span>
 		<div class="ui divider"></div>
-		<h2>Feature 3</h2>
-		<p>Overview</p>
+		<span class="content">
+			<b>Seize the Day</b> ·
+			<a href="https://github.com/formidablefrank/seizetheday" class="footer-link">GitHub Repository</a>
+		</span>
 	</div>
 </div>
 
