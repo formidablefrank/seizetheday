@@ -18,6 +18,8 @@ class Question extends CI_Model{
         return $this->db->query('SELECT DISTINCT question_id, choice_id, choice_text FROM questions_choices NATURAL JOIN choices WHERE question_id = 1');
     }
 
-    function putAnswer($qnum, $cnum)
+    function putAnswer($qnum, $cnum){
+
+    }
 }
 ?>
