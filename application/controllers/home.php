@@ -40,7 +40,7 @@ class Home extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
-	public function study(){
+	public function seek(){
 		$this->load->view('templates/header');
 		$this->load->view('faq');
 		$this->load->view('templates/footer');

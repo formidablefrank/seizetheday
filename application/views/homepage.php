@@ -30,7 +30,7 @@
 				<div class="ten wide mobile fourteen wide column">
 					<img class="ui fluid image" src="<?php echo base_url('img/study.svg'); ?>">
 					<br><br>
-					<a href="<?php echo base_url('home/study') ?>" class="fluid ui huge basic black button">Study</a>
+					<a href="<?php echo base_url('home/seek') ?>" class="fluid ui huge basic black button">Seek</a>
 				</div>
 			</div>
 		</div>
