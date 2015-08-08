@@ -54,27 +54,49 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
+	// give the query text field focus by default on page load
 	$('#queryText').focus();
-    $('#queryText').on('input', function(){
-        query = $(this).val();
-        if(query === '') {
-        	$('div .result').remove();
-        	return 0;
-        }
-        $.ajax({
-            url: '<?php echo base_url('home/ajax_search'); ?>',
-            async: false,
-            type: "POST",
-            data: "query=" + query,
-            dataType: "html",
-            success: function(result){
-            	results = $.parseJSON(result);
-            	$('div .result').remove();
-            	for (var i = results.length - 1; i >= 0; i--) {
-            		$("<div class='ui result segment'>" + "<h4 class='ui header'>" + results[i].faq_question + "</h4><p>" + results[i].faq_answer + "</p></div>").insertAfter('div .input');
-            	};
-            }
-        });
+
+	// declare a timeout variable to track typing and temporarily delay execution of ajax
+	var typeTimeout;
+
+	// handle query input field changes
+	$('#queryText').on('input', function(){
+		// append the loading state to the input field
+		$("#queryText").parent().addClass("loading");
+
+		// set input field value into this function's scope for use within the timeout callback
+		var query = $(this).val();
+
+		// clear timeout if it exists
+		clearTimeout(typeTimeout);
+
+		// reset typeTimeout since input has changed yet again
+		typeTimeout = setTimeout(function() {
+			// user hasn't edited the text field for 500ms, process execute ajax request
+			if(query === '') {
+				$("#queryText").parent().removeClass("loading");
+				$('div .result').remove();
+				return 0;
+			}
+
+			$.ajax({
+				url: '<?php echo base_url('home/ajax_search'); ?>',
+				type: "POST",
+				data: "query=" + query,
+				dataType: "json",
+				success: function(results){
+					$("#queryText").parent().removeClass("loading");
+					$('div .result').remove();
+					for (var i = results.length - 1; i >= 0; i--) {
+						$("<div class='ui result segment'>" + "<h4 class='ui header'>" + results[i].faq_question + "</h4><p>" + results[i].faq_answer + "</p></div>").insertAfter('div .input');
+					};
+				},
+				error: function(){
+					$("#queryText").parent().removeClass("loading");
+				}
+			});
+    	}, 500);
     });
 });
 </script>
