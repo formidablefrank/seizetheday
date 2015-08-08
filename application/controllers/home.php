@@ -63,6 +63,7 @@ class Home extends CI_Controller {
 
 	public function result($res){
 		$data['result'] = $res;
+		$data['description'] = 'yee';
 		$this->load->view('templates/header');
 		$this->load->view('result', $data);
 		$this->load->view('templates/footer');

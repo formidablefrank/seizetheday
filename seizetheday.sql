@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 08, 2015 at 03:00 PM
+-- Generation Time: Aug 08, 2015 at 10:34 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -31,7 +31,107 @@ CREATE TABLE IF NOT EXISTS `answers` (
   `question_id` int(11) NOT NULL,
   `choice_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=95 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `answers`
+--
+
+INSERT INTO `answers` (`answer_id`, `question_id`, `choice_id`, `user_id`) VALUES
+(1, 1, 1, 1),
+(2, 1, 2, 1),
+(3, 1, 2, 1),
+(4, 1, 1, 1),
+(5, 1, 2, 1),
+(6, 1, 2, 1),
+(7, 1, 1, 1),
+(8, 1, 1, 1),
+(9, 1, 1, 1),
+(10, 3, 1, 1),
+(11, 6, 1, 1),
+(12, 1, 2, 1),
+(13, 1, 2, 1),
+(14, 1, 2, 1),
+(15, 1, 2, 1),
+(16, 1, 2, 1),
+(17, 1, 2, 1),
+(18, 1, 1, 1),
+(19, 3, 1, 1),
+(20, 6, 1, 1),
+(21, 2, 4, 1),
+(22, 6, 1, 1),
+(23, 2, 3, 1),
+(24, 1, 1, 1),
+(25, 3, 1, 1),
+(26, 6, 1, 1),
+(27, 2, 4, 1),
+(28, 7, 1, 1),
+(29, 1, 2, 1),
+(30, 1, 1, 1),
+(31, 3, 1, 1),
+(32, 1, 1, 1),
+(33, 1, 1, 1),
+(34, 1, 2, 1),
+(35, 1, 1, 1),
+(36, 3, 2, 1),
+(37, 6, 2, 1),
+(38, 15, 2, 1),
+(39, 3, 2, 1),
+(40, 6, 2, 1),
+(41, 15, 2, 1),
+(42, 3, 2, 1),
+(43, 3, 2, 1),
+(44, 3, 2, 1),
+(45, 3, 2, 1),
+(46, 6, 2, 1),
+(47, 6, 2, 1),
+(48, 6, 2, 1),
+(49, 6, 2, 1),
+(50, 6, 2, 1),
+(51, 6, 2, 1),
+(52, 6, 2, 1),
+(53, 6, 2, 1),
+(54, 6, 2, 1),
+(55, 15, 2, 1),
+(56, 3, 2, 1),
+(57, 3, 2, 1),
+(58, 3, 2, 1),
+(59, 3, 2, 1),
+(60, 3, 2, 1),
+(61, 3, 2, 1),
+(62, 3, 2, 1),
+(63, 3, 2, 1),
+(64, 6, 1, 1),
+(65, 2, 3, 1),
+(66, 12, 2, 1),
+(67, 14, 2, 1),
+(68, 14, 2, 1),
+(69, 14, 2, 1),
+(70, 14, 2, 1),
+(71, 14, 2, 1),
+(72, 14, 2, 1),
+(73, 14, 2, 1),
+(74, 14, 2, 1),
+(75, 1, 2, 1),
+(76, 1, 1, 1),
+(77, 3, 2, 1),
+(78, 6, 2, 1),
+(79, 15, 2, 1),
+(80, 1, 2, 1),
+(81, 1, 1, 1),
+(82, 3, 1, 1),
+(83, 6, 1, 1),
+(84, 2, 3, 1),
+(85, 12, 1, 1),
+(86, 13, 2, 1),
+(87, 10, 1, 1),
+(88, 1, 2, 1),
+(89, 1, 1, 1),
+(90, 3, 2, 1),
+(91, 6, 2, 1),
+(92, 15, 1, 1),
+(93, 16, 2, 1),
+(94, 19, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -53,6 +153,27 @@ INSERT INTO `choices` (`choice_id`, `choice_text`) VALUES
 (2, 'No'),
 (3, 'Male'),
 (4, 'Female');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `faqs`
+--
+
+CREATE TABLE IF NOT EXISTS `faqs` (
+  `faq_id` int(11) NOT NULL,
+  `faq_timestamp` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `faq_question` varchar(1000) NOT NULL,
+  `faq_answer` varchar(1000) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `faqs`
+--
+
+INSERT INTO `faqs` (`faq_id`, `faq_timestamp`, `faq_question`, `faq_answer`) VALUES
+(1, '2015-08-08 18:48:52', 'How can we cure HIV?', 'HIV stands for human immunodeficiency virus. This is the virus that causes AIDS. There is no cure ye'),
+(2, '2015-08-08 18:57:53', 'What is chlamydia?', 'Most people who have chlamydia don''t have any signs or symptoms. Women with symptoms may have abnormal discharge (fluid) from the vagina, burning when they urinate (pee), or pain during sex. Men with symptoms may have abnormal discharge from the penis or burning when they urinate.');
 
 -- --------------------------------------------------------
 
@@ -90,9 +211,8 @@ INSERT INTO `questions` (`question_id`, `question_text`) VALUES
 (18, 'Is the rash spreading to other parts of your skin?'),
 (19, 'Is it releasing white discharge?'),
 (20, 'Are there strange growths around your genitals?'),
-(21, 'Are they red spots or fleshy bumps?'),
-(22, 'Are there many painful blisters?'),
-(23, 'Are there a few painless sores?');
+(21, 'Are they painful?'),
+(22, 'Do they look like sores?');
 
 -- --------------------------------------------------------
 
@@ -198,6 +318,12 @@ ALTER TABLE `choices`
   ADD PRIMARY KEY (`choice_id`);
 
 --
+-- Indexes for table `faqs`
+--
+ALTER TABLE `faqs`
+  ADD PRIMARY KEY (`faq_id`);
+
+--
 -- Indexes for table `questions`
 --
 ALTER TABLE `questions`
@@ -218,12 +344,17 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `answers`
 --
 ALTER TABLE `answers`
-  MODIFY `answer_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `answer_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=95;
 --
 -- AUTO_INCREMENT for table `choices`
 --
 ALTER TABLE `choices`
   MODIFY `choice_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `faqs`
+--
+ALTER TABLE `faqs`
+  MODIFY `faq_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `questions`
 --

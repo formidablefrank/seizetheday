@@ -71,7 +71,7 @@ $(document).ready(function(){
             	results = $.parseJSON(result);
             	$('div .result').remove();
             	for (var i = results.length - 1; i >= 0; i--) {
-            		$("<div class='ui result segment'>" + "<h4 class='ui header'>" + results[i].faq_answer + "</h4><p>" + results[i].faq_answer + "</p></div>").insertAfter('div .input');
+            		$("<div class='ui result segment'>" + "<h4 class='ui header'>" + results[i].faq_question + "</h4><p>" + results[i].faq_answer + "</p></div>").insertAfter('div .input');
             	};
             }
         });
