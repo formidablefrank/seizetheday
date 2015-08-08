@@ -30,9 +30,18 @@
 	</div>
 </div>
 
-<!-- list of questions -->
-<div class="ui container segments">
-  <div class="ui center aligned segment">
+
+
+
+<div class="ui container">
+	<!-- search bar to ask a question -->
+	<div class="faq ui fluid icon input">
+	  <input placeholder="Ask a question..." type="text">
+	  <i class="search icon"></i>
+	</div>
+
+	<!-- list of questions -->
+  <div class="faq ui center aligned segment">
     <p>Top</p>
   </div>
   <div class="ui center aligned segment">
@@ -48,3 +57,10 @@
     <p>Bottom</p>
   </div>
 </div>
+
+<style>
+.faq {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
