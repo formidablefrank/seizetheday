@@ -12,8 +12,10 @@
                     <img src="img/Forever.png" class="visible content">
                     <img src="/images/avatar/large/elliot.jpg" class="hidden content">
                 </div>
-                <div class="ui center aligned container">
-                  <button class="fluid ui  basic button">Connect</button>
+                <div class="content">
+                    <div class="ui center aligned container">
+                        <a class="header">Connect</a>
+                    </div>
                 </div>
             </div>
     </div>
@@ -23,8 +25,10 @@
                     <img src="img/Forever.png" class="visible content">
                     <img src="/images/avatar/large/elliot.jpg" class="hidden content">
                 </div>
-                <div class="ui center aligned container">
-                  <button class="fluid ui  basic button">Study</button>
+                <div class="content">
+                    <div class="ui center aligned container">
+                        <a class="header">Seek</a>
+                    </div>
                 </div>
             </div>
     </div>
@@ -34,8 +38,10 @@
                     <img src="img/Forever.png" class="visible content">
                     <img src="/images/avatar/large/elliot.jpg" class="hidden content">
                 </div>
-                <div class="ui center aligned container">
-                  <button class="fluid ui  basic button">Identify</button>
+                <div class="content">
+                    <div class="ui center aligned container">
+                        <a class="header">Identify</a>
+                    </div>
                 </div>
             </div>
     </div>
