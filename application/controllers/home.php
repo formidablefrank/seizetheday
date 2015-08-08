@@ -33,10 +33,22 @@ class Home extends CI_Controller {
 			$ans = 0;
 		}
 		$qnum = $this->question->evalQuestion($qnum, $ans);
-		$data['question'] = $this->result_table($this->question->getQuestion($qnum))[0];
-		$data['choices'] = $this->result_table($this->question->getChoices($qnum));
+		if(!is_integer($qnum)) {
+			redirect(base_url("home/result/$qnum"));
+		}
+		else {
+			$data['question'] = $this->result_table($this->question->getQuestion($qnum))[0];
+			$data['choices'] = $this->result_table($this->question->getChoices($qnum));
+			$this->load->view('templates/header');
+			$this->load->view('identify', $data);
+			$this->load->view('templates/footer');
+		}
+	}
+
+	public function result($res){
+		$data['result'] = $res;
 		$this->load->view('templates/header');
-		$this->load->view('identify', $data);
+		$this->load->view('result', $data);
 		$this->load->view('templates/footer');
 	}
 
