@@ -10,7 +10,7 @@
 		<div class="ui centered grid container">
 			<div class="fourteen wide column">
 				<img class="ui fluid image" src="<?php echo base_url('img/connect.svg'); ?>">
-				<button class="fluid ui huge button">Connect</button>
+				<button class="fluid ui huge button"><a href="<?php echo base_url('home/connect') ?>">Connect</a></button>
 			</div>
 		</div>
 	</div>
@@ -18,17 +18,17 @@
 		<div class="ui centered grid container">
 			<div class="fourteen wide column">
 				<img class="ui fluid image" src="<?php echo base_url('img/study.svg'); ?>">
-				<button class="fluid ui huge button">Study</button>
+				<button class="fluid ui huge button"><a href="<?php echo base_url('home/study') ?>">Study</a></button>
 			</div>
-		</div>   
+		</div>
 	</div>
 	<div class="five wide column">
 		<div class="ui centered grid container">
 			<div class="fourteen wide column">
 				<img class="ui fluid image" src="<?php echo base_url('img/identify.svg'); ?>">
-				<button class="fluid ui huge button">Identify</button>
+				<button class="fluid ui huge button"><a href="<?php echo base_url('home/connect') ?>">Identify</a></button>
 			</div>
-		</div>   
+		</div>
 	</div>
 </div>
 
