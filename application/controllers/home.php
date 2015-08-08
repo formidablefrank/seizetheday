@@ -30,4 +30,10 @@ class Home extends CI_Controller {
 		$this->load->view('choose');
 		$this->load->view('templates/footer');
 	}
+
+	public function identify(){
+		$this->load->view('templates/header');
+		$this->load->view('identify');
+		$this->load->view('templates/footer');
+	}
 }
