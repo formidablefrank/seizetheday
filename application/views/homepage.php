@@ -1,45 +1,69 @@
 
 <!-- application homepage branding -->
 <div class="ui container">
-	<h1> <i class="heart icon"></i> Seize the Day</h1>
+    <h1> <i class="heart icon"></i> Seize the Day</h1>
 </div>
 
 <!-- feature quick links -->
 <div class="ui stackable centered grid container">
-	<div class="five wide column">
-		feature 1
-	</div>
-	<div class="five wide column">
-		feature 2
-	</div>
-	<div class="five wide column">
-		feature 3
-	</div>
+    <div class="five wide column">
+            <div class="ui card">
+                <div class="ui fade reveal image">
+                    <img src="img/Forever.png" class="visible content">
+                    <img src="/images/avatar/large/elliot.jpg" class="hidden content">
+                </div>
+                <div class="ui center aligned container">
+                  <button class="fluid ui  basic button">Connect</button>
+                </div>
+            </div>
+    </div>
+    <div class="five wide column">
+            <div class="ui card">
+                <div class="ui fade reveal image">
+                    <img src="img/Forever.png" class="visible content">
+                    <img src="/images/avatar/large/elliot.jpg" class="hidden content">
+                </div>
+                <div class="ui center aligned container">
+                  <button class="fluid ui  basic button">Study</button>
+                </div>
+            </div>
+    </div>
+    <div class="five wide column">
+            <div class="ui card">
+                <div class="ui fade reveal image">
+                    <img src="img/Forever.png" class="visible content">
+                    <img src="/images/avatar/large/elliot.jpg" class="hidden content">
+                </div>
+                <div class="ui center aligned container">
+                  <button class="fluid ui  basic button">Identify</button>
+                </div>
+            </div>
+    </div>
 </div>
 
 <!-- feature overview and description -->
 <div class="ui fluid container">
-	<div class="ui divider"></div>
-	<div class="ui container">
-		<h2>Feature 1</h2>
-		<p>Overview</p>
-	</div>
+    <div class="ui divider"></div>
+    <div class="ui container">
+        <h2>Feature 1</h2>
+        <p>Overview</p>
+    </div>
 </div>
 
 <div class="ui fluid container">
-	<div class="ui container">
-		<div class="ui divider"></div>
-		<h2>Feature 2</h2>
-		<p>Overview</p>
-	</div>
+    <div class="ui container">
+        <div class="ui divider"></div>
+        <h2>Feature 2</h2>
+        <p>Overview</p>
+    </div>
 </div>
 
 <div class="ui fluid container">
-	<div class="ui container">
-		<div class="ui divider"></div>
-		<h2>Feature 3</h2>
-		<p>Overview</p>
-	</div>
+    <div class="ui container">
+        <div class="ui divider"></div>
+        <h2>Feature 3</h2>
+        <p>Overview</p>
+    </div>
 </div>
 
 <script src="http://js.api.here.com/se/2.5.4/jsl.js" type="text/javascript" charset="utf-8"></script>
