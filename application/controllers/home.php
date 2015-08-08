@@ -45,6 +45,22 @@ class Home extends CI_Controller {
 		}
 	}
 
+	public function ajax_search(){
+		if($this->input->post('query')){
+			$query = $this->input->post('query');
+			$results = $this->result_table($this->faq->searchFaq($query));
+			$values = '';
+			foreach ($results as $result) {
+				$values = $values . $result->faq_id . ',' . $result->faq_question . ',' . $result->faq_answer . ' ; ';
+			}
+			// echo $values;
+			echo json_encode($results);
+		}
+		else{
+			redirect('home/seek');
+		}
+	}
+
 	public function result($res){
 		$data['result'] = $res;
 		$this->load->view('templates/header');
@@ -62,6 +78,12 @@ class Home extends CI_Controller {
 		$this->load->view('templates/header');
 		$this->load->view('connect');
 		$this->load->view('templates/footer');
+	}
+
+	public function answer(){
+		if($this->input->post()){
+
+		}
 	}
 
 	function result_table($query){

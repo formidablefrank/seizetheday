@@ -33,31 +33,15 @@
 <div id="content-seek" class="ui text container">
 	<!-- search bar to ask a question -->
 	<div class="ui fluid large icon input">
-		<input placeholder="Type keywords here..." type="text">
+		<input placeholder="Type keywords here..." type="text" id="queryText">
 		<i class="search icon"></i>
 	</div>
 
 	<!-- list of questions -->
-	<div class="ui result segment">
+	<!-- <div class="ui result segment">
 		<h4 class="ui header">Question One</h4>
 		<p>Question description.</p>
-	</div>
-	<div class="ui result segment">
-		<h4 class="ui header">Question Two</h4>
-		<p>Question description.</p>
-	</div>
-	<div class="ui result segment">
-		<h4 class="ui header">Question Three</h4>
-		<p>Question description.</p>
-	</div>
-	<div class="ui result segment">
-		<h4 class="ui header">Question Four</h4>
-		<p>Question description.</p>
-	</div>
-	<div class="ui result segment">
-		<h4 class="ui header">Question Five</h4>
-		<p>Question description.</p>
-	</div>
+	</div> -->
 </div>
 
 <!-- temporary page fillers -->
@@ -65,3 +49,32 @@
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<script type="text/javascript" src="<?php echo base_url('js/jquery.min.js') ?>"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#queryText').focus();
+    $('#queryText').on('input', function(){
+        query = $(this).val();
+        if(query === '') {
+        	$('div .result').remove();
+        	return 0;
+        }
+        $.ajax({
+            url: '<?php echo base_url('home/ajax_search'); ?>',
+            async: false,
+            type: "POST",
+            data: "query=" + query,
+            dataType: "html",
+            success: function(result){
+            	results = $.parseJSON(result);
+            	$('div .result').remove();
+            	for (var i = results.length - 1; i >= 0; i--) {
+            		$("<div class='ui result segment'>" + "<h4 class='ui header'>" + results[i].faq_answer + "</h4><p>" + results[i].faq_answer + "</p></div>").insertAfter('div .input');
+            	};
+            }
+        });
+    });
+});
+</script>
