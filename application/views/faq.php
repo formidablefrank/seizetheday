@@ -29,3 +29,22 @@
 		</div>
 	</div>
 </div>
+
+<!-- list of questions -->
+<div class="ui container segments">
+  <div class="ui center aligned segment">
+    <p>Top</p>
+  </div>
+  <div class="ui center aligned segment">
+    <p>Middle</p>
+  </div>
+  <div class="ui center aligned segment">
+    <p>Middle</p>
+  </div>
+  <div class="ui center aligned segment">
+    <p>Middle</p>
+  </div>
+  <div class="ui center aligned segment">
+    <p>Bottom</p>
+  </div>
+</div>
