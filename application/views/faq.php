@@ -1,7 +1,7 @@
 <!-- content topmenu -->
-<div class="ui large fixed secondary menu">
+<div class="ui large fixed secondary sticky menu ontop">
 	<div class="ui container">
-		<a href="<?php echo base_url('home') ?>" class="item header">
+		<a href="<?php echo base_url('home') ?>" class="item">
 			<i class="heart icon"></i>
 		</a>
 		<a href="<?php echo base_url('home/connect') ?>" class="item">
@@ -29,3 +29,9 @@
 		</div>
 	</div>
 </div>
+
+<!-- temporary page fillers -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
