@@ -6,6 +6,10 @@
 	min-height: 100vh;
 }
 
+#homepage-masthead .ui.secondary.menu {
+	padding: 1.5rem 0rem;
+}
+
 #homepage-masthead #quick-links {
 	padding: 10vh 0em 15vh;
 }

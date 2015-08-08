@@ -3,9 +3,9 @@
 	<!-- application homepage branding -->
 	<div class="ui large secondary menu">
 		<div class="ui container">
-			<div class="item">
+			<a href="<?php echo base_url('home') ?>" class="item">
 				<i class="heart icon"></i> Seize the Day
-			</div>
+			</a>
 			<div class="right menu">
 				<div class="item">
 					Social links
