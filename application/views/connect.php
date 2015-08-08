@@ -32,24 +32,37 @@
 
 <div id="content-connect" class="ui text container">
 	<!-- input field for bluemix query -->
-	<div class="ui fluid large action input">
-		<input placeholder="Ask a question here..." type="text">
-		<button class="ui large blue right labeled icon button">
-			<i class="comments icon"></i>
-			Ask
-		</button>
-	</div>
+	<form id="connect-form" action="" method="GET">
+		<div class="ui fluid large action input">
+			<input placeholder="Ask a question here..." type="text">
+			<button type="submit" class="ui large blue right labeled icon button">
+				<i class="comments icon"></i>
+				Ask
+			</button>
+		</div>
+	</form>
 
 	<!-- output field for displaying fetched content -->
-	<div class="ui segments">
-		<div class="ui segment">
-			Your query will appear here
+	<div class="ui icon message">
+		<i class="quote left icon"></i>
+		<div class="content">
+			<div id="connect-query" class="header">
+				Type in a question above.
+			</div>
 		</div>
-		<div class="ui segment">
-			answer will appear here
+	</div>
+	<div class="ui icon blue message">
+		<i class="quote right icon"></i>
+		<div class="content">
+			<div id="connect-result" class="ui segment">
+				An answer will appear here!
+			</div>
 		</div>
 	</div>
 </div>
+
+<!-- load page-specific custom js -->
+<script type="text/javascript" src="<?php echo base_url('js/connect.js') ?>"></script>
 
 <!-- temporary page fillers -->
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
