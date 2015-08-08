@@ -9,4 +9,6 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 <p>Are you male or female?</p>
 <p>Email:</p>
 
-<script type="text/javascript" src="<?php echo site_url('js/map.js'); ?>"></script>
+<script src="http://js.api.here.com/se/2.5.4/jsl.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="<?php echo base_url('js/map.js'); ?>"></script>
+<!-- TODO: store lat and lon in session var -->
