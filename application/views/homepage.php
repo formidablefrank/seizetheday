@@ -7,15 +7,12 @@
 <!-- feature quick links -->
 <div class="ui stackable centered grid container">
     <div class="five wide column">
-            <div class="ui card">
-                <div class="ui fade reveal image">
-                    <img src="img/Forever.png" class="visible content">
-                    <img src="/images/avatar/large/elliot.jpg" class="hidden content">
-                </div>
-                <div class="ui center aligned container">
-                  <button class="fluid ui  basic button">Connect</button>
-                </div>
-            </div>
+    	<div class="ui centered grid container">
+    		<div class="fourteen wide column">
+				<img class="ui fluid image" src="<?php echo base_url('img/connect.svg'); ?>">
+				<button class="fluid ui huge button">Connect</button>
+    		</div>
+    	</div>
     </div>
     <div class="five wide column">
             <div class="ui card">
@@ -66,6 +63,8 @@
     </div>
 </div>
 
+<!-- // temporarily comment out for faster local loading
 <script src="http://js.api.here.com/se/2.5.4/jsl.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" src="<?php echo base_url('js/map.js'); ?>"></script>
+-->
 <!-- TODO: store lat and lon in session var -->
