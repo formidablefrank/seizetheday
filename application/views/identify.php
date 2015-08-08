@@ -31,7 +31,7 @@
 </div>
 
 <!-- Display the question -->
-<div class="ui huge center aligned header">
+<div id="content-identify" class="ui huge center aligned header">
 	<?php echo $question->question_text; ?>
 </div>
 

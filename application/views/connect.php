@@ -30,6 +30,8 @@
 	</div>
 </div>
 
+<div id="content-connect"></div>
+
 <!-- temporary page fillers -->
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
