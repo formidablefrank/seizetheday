@@ -1,6 +1,5 @@
 
-
-/* Homepage Styles */
+/* homepage styles */
 
 #homepage-masthead {
 	background: #E0E0E0;
@@ -62,4 +61,25 @@
 
 #homepage-footer a.footer-link:hover {
 	text-decoration: underline;
+}
+
+/* content styles */
+.content-masthead {
+	padding: 6rem 0em 1.6rem;
+	background: #E0E0E0;
+	font-size: 2rem;
+}
+
+.content-masthead .highlight {
+	font-weight: bold;
+	color: #FF324A;
+}
+
+#content-masthead-connect {
+}
+
+#content-masthead-seek {
+}
+
+#content-masthead-identify {
 }
