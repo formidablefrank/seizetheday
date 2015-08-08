@@ -89,7 +89,15 @@ $(document).ready(function(){
 					$("#queryText").parent().removeClass("loading");
 					$('div .result').remove();
 					for (var i = results.length - 1; i >= 0; i--) {
-						$("<div class='ui result segment'>" + "<h4 class='ui header'>" + results[i].faq_question + "</h4><p>" + results[i].faq_answer + "</p></div>").insertAfter('div .input');
+						var resultTemplate =
+							"<div class='ui result segment'>" +
+								"<span class='ui red ribbon label'>Category</span>" +
+								"<span><span class='ui header'>" +
+									results[i].faq_question +
+								"</span></span>" +
+								"<p>" + results[i].faq_answer + "</p>" +
+							"</div>";
+						$(resultTemplate).insertAfter('#content-seek .input');
 					};
 				},
 				error: function(){
