@@ -28,7 +28,7 @@
 		<div class="five wide column">
 			<div class="ui centered grid container">
 				<div class="ten wide mobile fourteen wide column">
-					<img class="ui fluid image" src="<?php echo base_url('img/study.svg'); ?>">
+					<img class="ui fluid image" src="<?php echo base_url('img/seek.svg'); ?>">
 					<br><br>
 					<a href="<?php echo base_url('home/seek') ?>" class="fluid ui huge basic black button">Seek</a>
 				</div>
