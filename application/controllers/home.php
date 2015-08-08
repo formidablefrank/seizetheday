@@ -25,15 +25,26 @@ class Home extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
+	public function identify($qnum, $ans){
+		$data['question'] = $this->result_table($this->question->getQuestion($qnum))[0];
+		$data['choices'] = $this->result_table($this->question->getChoices($qnum));
+		$this->load->view('templates/header');
+		$this->load->view('identify', $data);
+		$this->load->view('templates/footer');
+	}
+
 	public function choose(){
 		$this->load->view('templates/header');
 		$this->load->view('choose');
 		$this->load->view('templates/footer');
 	}
 
-	public function identify(){
-		$this->load->view('templates/header');
-		$this->load->view('identify');
-		$this->load->view('templates/footer');
-	}
+	function result_table($query){
+        $table = array();
+        foreach ($query->result() as $row) {
+            $table[] = $row;
+        }
+        $query->free_result();
+        return $table;
+    }
 }
