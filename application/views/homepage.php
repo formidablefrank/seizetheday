@@ -21,7 +21,7 @@
 				<div class="ten wide mobile fourteen wide column">
 					<img class="ui fluid image" src="<?php echo base_url('img/connect.svg'); ?>">
 					<br><br>
-					<a href="connect" class="fluid ui huge basic black button">Connect</a>
+					<a href="<?php echo base_url('home/connect') ?>" class="fluid ui huge basic black button">Connect</a>
 				</div>
 			</div>
 		</div>
@@ -30,7 +30,7 @@
 				<div class="ten wide mobile fourteen wide column">
 					<img class="ui fluid image" src="<?php echo base_url('img/study.svg'); ?>">
 					<br><br>
-					<a href="study" class="fluid ui huge basic black button">Study</a>
+					<a href="<?php echo base_url('home/study') ?>" class="fluid ui huge basic black button">Study</a>
 				</div>
 			</div>
 		</div>
@@ -39,7 +39,7 @@
 				<div class="ten wide mobile fourteen wide column">
 					<img class="ui fluid image" src="<?php echo base_url('img/identify.svg'); ?>">
 					<br><br>
-					<a href="identify" class="fluid ui huge basic black button">Identify</a>
+					<a href="<?php echo base_url('home/identify') ?>" class="fluid ui huge basic black button">Identify</a>
 				</div>
 			</div>
 		</div>

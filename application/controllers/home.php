@@ -25,15 +25,39 @@ class Home extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
-	public function choose(){
+	public function identify($qnum = NULL, $ans = NULL){
+		if($qnum != NULL && $ans != NULL){
+			$this->question->putAnswer($qnum, $ans, 1);
+		} else {
+			$qnum = 0;
+			$ans = 0;
+		}
+		$qnum = $this->question->evalQuestion($qnum, $ans);
+		$data['question'] = $this->result_table($this->question->getQuestion($qnum))[0];
+		$data['choices'] = $this->result_table($this->question->getChoices($qnum));
 		$this->load->view('templates/header');
-		$this->load->view('choose');
+		$this->load->view('identify', $data);
 		$this->load->view('templates/footer');
 	}
 
-	public function identify(){
+	public function study(){
 		$this->load->view('templates/header');
-		$this->load->view('identify');
+		$this->load->view('faq');
 		$this->load->view('templates/footer');
 	}
+
+	public function connect(){
+		$this->load->view('templates/header');
+		$this->load->view('connect');
+		$this->load->view('templates/footer');
+	}
+
+	function result_table($query){
+        $table = array();
+        foreach ($query->result() as $row) {
+            $table[] = $row;
+        }
+        $query->free_result();
+        return $table;
+    }
 }
