@@ -63,7 +63,7 @@
 	text-decoration: underline;
 }
 
-/* content styles */
+/* general content styles */
 .ui.secondary.sticky.menu {
 	padding: 0.5rem 0rem;
 	background: #F8F8F8;
@@ -89,19 +89,27 @@
 	color: #FF324A;
 }
 
+
+/* Connect content styles */
 #content-masthead-connect {
 }
 
+#content-connect .ui.input {
+	margin-top: 2em;
+	margin-bottom: 1.5em;
+}
+
+#content-connect .ui.input input {
+	border-color: #2185D0;
+}
+
+/* Seek content styles */
 #content-masthead-seek {
 }
 
-#content-seek .input {
-	padding-top: 2em;
-	padding-bottom: 1.5em;
-}
-
-#content-seek .input {
-	padding-bottom: 1em;
+#content-seek .ui.input {
+	margin-top: 2em;
+	margin-bottom: 1.5em;
 }
 
 #content-seek .ui.result.segment {
@@ -113,5 +121,6 @@
 	transform: translateY(-0.14em);
 }
 
+/* Identify content styles */
 #content-masthead-identify {
 }

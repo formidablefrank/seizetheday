@@ -30,11 +30,11 @@
 	</div>
 </div>
 
-<div id="content-seek" class="ui container">
+<div id="content-seek" class="ui text container">
 	<!-- search bar to ask a question -->
-	<div class="ui fluid icon huge input">
+	<div class="ui fluid large icon input">
 		<input placeholder="Type keywords here..." type="text">
-		<i class="search link icon"></i>
+		<i class="search icon"></i>
 	</div>
 
 	<!-- list of questions -->
