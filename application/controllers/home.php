@@ -97,7 +97,7 @@ class Home extends CI_Controller {
 
 	        $arr_post_body = array(
 	            "message_type" => "SEND",
-	            "mobile_number" => $number,
+	            "mobile_number" => "63" . $number,
 	            "shortcode" => "29290469148",
 	            "message_id" => $msgid,
 	            "message" => "Good morning " . $name . "! For walk-in consultations, you can visit Dr. X at Room 123 Hospital Y, Quezon City from 2pm-5pm. Thank you so much and SeizeTheDay!",
@@ -113,13 +113,18 @@ class Home extends CI_Controller {
 
 	        $URL = "https://post.chikka.com/smsapi/request";
 
-	        $curl_handler = curl_init();
-	        curl_setopt($curl_handler, CURLOPT_URL, $URL);
-	        curl_setopt($curl_handler, CURLOPT_POST, count($arr_post_body));
-	        curl_setopt($curl_handler, CURLOPT_POSTFIELDS, urlencode($query_string));
-	        curl_setopt($curl_handler, CURLOPT_RETURNTRANSFER, TRUE);
-	        $responseasd = curl_exec($curl_handler);
-	        curl_close($curl_handler);
+	        // $curl_handler = curl_init();
+	        // curl_setopt($curl_handler, CURLOPT_URL, $URL);
+	        // curl_setopt($curl_handler, CURLOPT_POST, count($arr_post_body));
+	        // curl_setopt($curl_handler, CURLOPT_POSTFIELDS, urlencode($query_string));
+	        // curl_setopt($curl_handler, CURLOPT_RETURNTRANSFER, TRUE);
+	        // $responseasd = curl_exec($curl_handler);
+	        // curl_close($curl_handler);
+
+	        $response = $this->curl->simple_get($URL);
+	        print_r($response);
+	        exit(0);
+
 		}
 		redirect(base_url());
 	}
