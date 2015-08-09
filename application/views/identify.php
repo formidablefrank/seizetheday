@@ -62,9 +62,3 @@
 
 <!-- load page-specific custom js -->
 <script type="text/javascript" src="<?php echo base_url('js/identifyquestions.js') ?>"></script>
-
-<!-- temporary page fillers -->
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
