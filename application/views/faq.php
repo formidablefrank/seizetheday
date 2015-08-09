@@ -47,12 +47,6 @@
 	</div>
 </div>
 
-<!-- temporary page fillers -->
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
 <script type="text/javascript" src="<?php echo base_url('js/jquery.min.js') ?>"></script>
 
 <script type="text/javascript">
