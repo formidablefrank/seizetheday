@@ -108,6 +108,10 @@
 	color: #3672C3;
 }
 
+#content-connect .column {
+	padding: 4rem;
+}
+
 #content-connect .ui.input {
 	margin-top: 2em;
 	margin-bottom: 1.5em;
