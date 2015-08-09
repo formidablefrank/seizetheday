@@ -2,7 +2,8 @@
 /* homepage styles */
 
 #homepage-masthead {
-	background: #E0E0E0;
+	background: #E0E0E0 url("../img/condom-bg.png") no-repeat center;
+	background-size: cover;
 	min-height: 100vh;
 }
 
@@ -14,16 +15,39 @@
 	padding: 10vh 0em 15vh;
 }
 
+#homepage-masthead #quick-links .container .column {
+	background: rgba(255,255,255,0.05);
+	transition: 0.5s all ease;
+}
+
+#homepage-masthead #quick-links .container .column:hover {
+	background: rgba(255,255,255,0.1);
+}
+
+#homepage-masthead #quick-links .container .column img {
+	opacity: 0.4;
+	transition: 0.5s all ease;
+}
+
+#homepage-masthead #quick-links .container .column:hover img {
+	opacity: 0.6;
+}
+
 .homepage-subhead {
 	padding: 10vh 0em;
 	min-height: 80vh;
+	font-size: 2rem;
+}
+
+.homepage-subhead h1 {
+	font-size: 4rem;
 }
 
 #homepage-subhead-identify {
 	background: #FFFFFF;
 }
 
-#homepage-subhead-study {
+#homepage-subhead-seek {
 	background: #E0E0E0;
 }
 

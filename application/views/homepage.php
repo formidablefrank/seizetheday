@@ -4,7 +4,7 @@
 	<div class="ui large secondary menu">
 		<div class="ui container">
 			<a href="<?php echo base_url('home') ?>" class="item">
-				<i class="heart icon"></i> Seize the Day
+				<img src="<?php echo base_url('img/seizetheday-logo.svg'); ?>" class="ui small image">
 			</a>
 			<div class="right menu">
 				<button class="ui basic blue button">
@@ -31,7 +31,7 @@
 				<div class="ten wide mobile fourteen wide column">
 					<img class="ui fluid image" src="<?php echo base_url('img/connect.svg'); ?>">
 					<br><br>
-					<a href="<?php echo base_url('home/connect') ?>" class="fluid ui huge basic black button">Connect</a>
+					<a href="<?php echo base_url('home/connect') ?>" class="fluid ui huge grey button">Connect</a>
 				</div>
 			</div>
 		</div>
@@ -40,7 +40,7 @@
 				<div class="ten wide mobile fourteen wide column">
 					<img class="ui fluid image" src="<?php echo base_url('img/seek.svg'); ?>">
 					<br><br>
-					<a href="<?php echo base_url('home/seek') ?>" class="fluid ui huge basic black button">Seek</a>
+					<a href="<?php echo base_url('home/seek') ?>" class="fluid ui huge grey button">Seek</a>
 				</div>
 			</div>
 		</div>
@@ -49,7 +49,7 @@
 				<div class="ten wide mobile fourteen wide column">
 					<img class="ui fluid image" src="<?php echo base_url('img/identify.svg'); ?>">
 					<br><br>
-					<a href="<?php echo base_url('home/identify') ?>" class="fluid ui huge basic black button">Identify</a>
+					<a href="<?php echo base_url('home/identify') ?>" class="fluid ui huge grey button">Identify</a>
 				</div>
 			</div>
 		</div>
@@ -57,7 +57,7 @@
 </div>
 
 <!-- feature overview and description -->
-<div id="homepage-subhead-identify" class="homepage-subhead">
+<div id="homepage-subhead-connect" class="homepage-subhead">
 	<div class="ui grid container">
 		<div class="ten wide column">
 			<h1>Connect</h1>
@@ -65,13 +65,15 @@
 			create appointments with local clinics. Recieve confirmation via SMS.</p>
 		</div>
 		<div class="six wide column">
+			<img src="<?php echo base_url('img/connect.svg'); ?>" class="ui huge image">
 		</div>
 	</div>
 </div>
 
-<div id="homepage-subhead-study" class="homepage-subhead">
+<div id="homepage-subhead-seek" class="homepage-subhead">
 	<div class="ui grid container">
 		<div class="six wide column">
+			<img src="<?php echo base_url('img/seek.svg'); ?>" class="ui huge image">
 		</div>
 		<div class="ten wide column">
 			<h1>Seek</h1>
@@ -79,13 +81,14 @@
 		</div>
 	</div>
 </div>
-<div id="homepage-subhead-connect" class="homepage-subhead">
+<div id="homepage-subhead-identify" class="homepage-subhead">
 	<div class="ui grid container">
 		<div class="ten wide column">
 			<h1>Identify</h1>
 			<p>Do you think you have an STD? We will help you see if you need a doctor.</p>
 		</div>
 		<div class="six wide column">
+			<img src="<?php echo base_url('img/identify.svg'); ?>" class="ui huge image">
 		</div>
 	</div>
 </div>
