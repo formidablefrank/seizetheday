@@ -28,7 +28,7 @@ class Question extends CI_Model{
                     [0, 0, 0, 12, 7],
                     [0, 6, 6, 0, 0],
                     [0, 5, "healthy",0,0],
-                    ["healthy", "HIV", 0, 0, 0],
+                    [0, "healthy", "HIV", 0, 0],
                     [0, 2, 15, 0, 0],
                     [0, "chlamydia", 8, 0, 0],
                     [0, 9, 10, 0, 0],
