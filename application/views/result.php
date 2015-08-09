@@ -54,9 +54,11 @@ else if($result == 'warts'){ $desc = 'Consult a doctor right away!'; }
 ?>
 
 <!-- display result -->
-<div id="content-identify" class="ui huge center aligned header">
-    <?php echo $result; ?>
+<div id="content-identify" class="ui centered card">
+    <div class="content">
+        <div class="header"><?php echo $result; ?></div>
+    </div>
+    <div class="extra content"><?php echo $desc; ?></div>
 </div>
 <p>
-<?php echo $desc; ?>
 </p>
