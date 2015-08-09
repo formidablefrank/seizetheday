@@ -38,19 +38,25 @@
     </div>
 </div>
 
-<h1><?php echo $result; ?></h1>
-<p>
+<!-- set description based on result -->
 <?php
-if($result == 'consult'){ echo 'Consult a doctor right away!'; }
-else if($result == 'healthy'){ echo 'You are healthy. No need to worry.'; }
-else if($result == 'chlamydia'){ echo 'Consult a doctor right away!'; }
-else if($result == 'HIV'){ echo 'Description'; }
-else if($result == 'gonorrhea'){ echo 'Consult a doctor right away!'; }
-else if($result == 'scabies'){ echo 'Consult a doctor right away!'; }
-else if($result == 'pubic lice'){ echo 'Consult a doctor right away!'; }
-else if($result == 'yeast'){ echo 'Consult a doctor right away!'; }
-else if($result == 'herpes'){ echo 'Consult a doctor right away!'; }
-else if($result == 'syphilis'){ echo 'Consult a doctor right away!'; }
-else if($result == 'warts'){ echo 'Consult a doctor right away!'; }
+if($result == 'consult'){ $desc = 'Consult a doctor right away!'; }
+else if($result == 'healthy'){ $desc = 'You are healthy. No need to worry.'; }
+else if($result == 'chlamydia'){ $desc = 'Consult a doctor right away!'; }
+else if($result == 'HIV'){ $desc = 'Description'; }
+else if($result == 'gonorrhea'){ $desc = 'Consult a doctor right away!'; }
+else if($result == 'scabies'){ $desc = 'Consult a doctor right away!'; }
+else if($result == 'pubic lice'){ $desc = 'Consult a doctor right away!'; }
+else if($result == 'yeast'){ $desc = 'Consult a doctor right away!'; }
+else if($result == 'herpes'){ $desc = 'Consult a doctor right away!'; }
+else if($result == 'syphilis'){ $desc = 'Consult a doctor right away!'; }
+else if($result == 'warts'){ $desc = 'Consult a doctor right away!'; }
 ?>
+
+<!-- display result -->
+<div id="content-identify" class="ui huge center aligned header">
+    <?php echo $result; ?>
+</div>
+<p>
+<?php echo $desc; ?>
 </p>
