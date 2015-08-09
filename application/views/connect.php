@@ -41,7 +41,7 @@
 </div>
 
 <div class="ui basic segment">
-	<div id="content-connect" class="ui two column middle aligned stackable grid container">
+	<div id="connect-bluemix" class="ui two column middle aligned stackable grid container">
 		<!-- bluemix query -->
 		<div class="column">
 			<!-- input field for bluemix query -->
@@ -90,7 +90,8 @@
 					</div>
 				</div>
 				<div class="ui right aligned segment">
-					<button class="ui large green button" id="talk">
+					<button class="ui labeled icon large green button" id="talk">
+						<i class="calendar icon"></i>
 						Schedule an Appointment
 					</button>
 				</div>
@@ -99,38 +100,83 @@
 	</div>
 </div>
 
-<style type="text/css">
-	.label {
-		width:150px;
-		display: inline-block;
-	}
-</style>
-
-<div class="ui small modal">
-	<i class="close icon"></i>
+<!-- appointment scheduler modal -->
+<div id="connect-schedule-modal" class="ui small basic modal">
 	<div class="header">
-		Please provide your information and we will send you a text message for your appointment details.
+		<h2><i class="calendar icon"></i> Schedule an Appointment</h2>
 	</div>
 	<div class="content">
 		<?php echo form_open(base_url('home/appointment'), array('method' => 'POST')); ?>
-		<div class="ui form">
-			<div class="ui labeled input" style="padding: 10px 0px;">
-				<div class="ui large label">Name</div>
-				<input type="text" name="name" placeholder="Juan dela Cruz">
+		<!-- schedule form: user information -->
+		<div class="ui basic inverted form segment">
+			<h3 class="section header"><i class="info icon"></i> User Information</h3>
+			<p>Please provide your basic information.
+				This will be sent to the attending doctor.</p>
+			<div class="two fields">
+				<div class="twelve wide field">
+					<label>Name</label>
+					<input type="text" name="name" placeholder="Juan dela Cruz">
+				</div>
+				<div class="four wide field">
+					<label>Age</label>
+					<input type="text" name="age" placeholder="21">
+				</div>
 			</div>
-			<div class="ui labeled input" style="padding: 10px 0px;">
-				<div class="ui large label">Mobile Number</div>
-				<input type="text" name="number" placeholder="639XXXXXXXXX">
+			<div class="two fields">
+				<div class="six wide field">
+					<label>Sex</label>
+					<select class="ui fluid dropdown" name="sex">
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+					</select>
+				</div>
+				<div class="ten wide field">
+					<label>Field of Concern</label>
+					<input type="text" name="field" placeholder="Possible cardiorespiratory issue">
+				</div>
+			</div>
+		</div>
+
+		<!-- schedule form: contact details -->
+		<div class="ui basic inverted form segment">
+			<h3 class="section header"><i class="phone icon"></i> Contact Details</h3>
+			<p>Please provide your contact details.
+				You will be contacted once you have been scheduled for an appointment.</p>
+			<div class="two fields">
+				<div class="field">
+					<label>Mobile Number</label>
+					<div class="ui labeled fluid input">
+						<div class="ui label">+63</div>
+						<input type="text" name="number" placeholder="919 345 2658">
+					</div>
+				</div>
+				<div class="field">
+					<label>Email</label>
+					<input type="text" name="age" placeholder="juan.delacruz@example.com">
+				</div>
 			</div>
 		</div>
 	</div>
 	<div class="actions">
-		<button class="ui button" name="submit">Submit</button>
+		<button id="connect-schedule-modal-close" class="ui red basic inverted button">Cancel</button>
+		<button class="ui green basic inverted button" name="submit">Proceed</button>
 		<?php echo form_close(); ?>
 	</div>
 </div>
+
 <!-- load page-specific custom js -->
 <script type="text/javascript" src="<?php echo base_url('js/connect.js') ?>"></script>
+<script type="text/javascript">
+	(function() {
+		$(function() {
+			// handles closing of modal when Cancel button is clicked
+			$("#connect-schedule-modal-close").click(function(e) {
+				e.preventDefault();
+				$("#connect-schedule-modal").modal("hide");
+			});
+		});
+	})();
+</script>
 
 <!-- temporary page fillers -->
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>

@@ -108,17 +108,55 @@
 	color: #3672C3;
 }
 
-#content-connect .column {
+#connect-bluemix .column {
 	padding: 4rem;
 }
 
-#content-connect .ui.input {
+#connect-bluemix .ui.input {
 	margin-top: 2em;
 	margin-bottom: 1.5em;
 }
 
-#content-connect .ui.input input {
+#connect-bluemix .ui.input input {
 	border-color: #2185D0;
+}
+
+#connect-schedule-modal .ui.inverted.form {
+	background: transparent;
+}
+
+#connect-schedule-modal > .header {
+	color: #4DE471;
+}
+
+#connect-schedule-modal .section.header {
+	color: #52AEF3;
+}
+
+#connect-schedule-modal input,
+#connect-schedule-modal select {
+	background: rgba(0,0,0,0.5);
+	color: #E8E8E8;
+}
+
+#connect-schedule-modal select option {
+	padding: 1rem;
+}
+
+#connect-schedule-modal .ui.label {
+	background: rgba(0,0,0,0.5);
+	color: #E8E8E8;
+	position: relative;
+}
+
+#connect-schedule-modal .ui.label:after {
+	content: " ";
+	position: absolute;
+	top: 25%;
+	right: 0px;
+	width: 1px;
+	height: 50%;
+	background: rgba(255,255,255,0.5);
 }
 
 /* Seek content styles */
