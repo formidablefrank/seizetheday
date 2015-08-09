@@ -116,3 +116,5 @@
 <script type="text/javascript" src="<?php echo base_url('js/map.js'); ?>"></script>
 -->
 <!-- TODO: store lat and lon in session var -->
+
+<script type="text/javascript" src="<?php echo base_url('js/fbshare.js'); ?>"></script>
