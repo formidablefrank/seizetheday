@@ -121,7 +121,7 @@ $(function(){
 		<h2><i class="calendar icon"></i> Schedule an Appointment</h2>
 	</div>
 	<div class="content">
-		<?php echo form_open(base_url('home/appointment'), array('method' => 'POST')); ?>
+		<?php //echo form_open(base_url('home/appointment'), array('method' => 'POST')); ?>
 		<!-- schedule form: user information -->
 		<div class="ui basic inverted form segment">
 			<h3 class="section header"><i class="info icon"></i> User Information</h3>
@@ -130,7 +130,7 @@ $(function(){
 			<div class="two fields">
 				<div class="twelve wide field">
 					<label>Name</label>
-					<input type="text" name="name" placeholder="Juan dela Cruz">
+					<input type="text" name="name" id="name" placeholder="Juan dela Cruz">
 				</div>
 				<div class="four wide field">
 					<label>Age</label>
@@ -162,7 +162,7 @@ $(function(){
 					<label>Mobile Number</label>
 					<div class="ui labeled fluid input">
 						<div class="ui label">+63</div>
-						<input type="text" name="number" placeholder="919 345 2658">
+						<input type="text" name="number" id="number" placeholder="919 345 2658">
 					</div>
 				</div>
 				<div class="field">
@@ -174,8 +174,8 @@ $(function(){
 	</div>
 	<div class="actions">
 		<button id="connect-schedule-modal-close" class="ui red basic inverted button">Cancel</button>
-		<button class="ui green basic inverted button" name="submit">Proceed</button>
-		<?php echo form_close(); ?>
+		<button id="connect-submit" class="ui green basic inverted button" name="submit">Proceed</button>
+		<?php //echo form_close(); ?>
 	</div>
 </div>
 
@@ -188,6 +188,21 @@ $(function(){
 			$("#connect-schedule-modal-close").click(function(e) {
 				e.preventDefault();
 				$("#connect-schedule-modal").modal("hide");
+			});
+		});
+
+		$('#connect-submit').on('click', function(){
+			$.ajax({
+				url: "https://post.chikka.com:443/smsapi/request",
+				type: "POST",
+				data: "&message_type=SEND&mobile_number=63"+ $('#number').val() +"&shortcode=29290469148&message_id=123142&message=Good morning " + $('#name').val() +"! For walk-in consultations, you can visit Dr. X at Room 123 Hospital Y, Quezon City from 2pm-5pm. Thank you so much and SeizeTheDay!&client_id=f3be0f5b7d2abc0ce6fc0dccf7ecc049272af5679fbf5a547429cbaddb0391ff&secret_key=36718d987648bb0e46b32dcff3c751d7c445453091dcf4079c7662b6cad653d0",
+				dataType: "json",
+				success: function(result){
+					console.log('yeahuhh');
+				},
+				error: function(err){
+					window.location.href = "<?php echo base_url() ?>";
+				}
 			});
 		});
 	})();
