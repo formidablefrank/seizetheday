@@ -68,6 +68,37 @@
 			</div>
 		</div>
 	</div>
+
+	<br/>
+	<h1>-OR-</h1>
+	<button class="ui button" id="talk">Talk to our partner doctors!</button>
+	<p>And schedule an appointment with them.</p>
+
+	<div class="ui modal">
+		<i class="close icon"></i>
+		<div class="header">
+			Please provide your information and we will send you a text message for your appointment details.
+		</div>
+		<div class="content">
+			<?php echo form_open(base_url('home/appointment'), array('method' => 'POST')); ?>
+			<div class="ui form">
+				<div class="field">
+					<label>Name</label>
+					<input type="text" name="name">
+				</div>
+				<div class="field">
+					<label>Mobile Number</label>
+					<input type="text" name="number">
+				</div>
+			</div>
+		</div>
+		<div class="actions">
+			<button class="ui button" name="submit">
+			Submit
+			</button>
+			<?php echo form_close(); ?>
+		</div>
+	</div>
 </div>
 
 <!-- load page-specific custom js -->

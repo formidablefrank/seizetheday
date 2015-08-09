@@ -23,5 +23,9 @@
 				$("#connect-result").removeClass("loading");
 			});
 		});
+
+		$('#talk').on('click', function(){
+			$('.modal').modal('show');
+		});
 	});
 })();
