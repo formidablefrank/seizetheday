@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 08, 2015 at 10:34 PM
+-- Generation Time: Aug 09, 2015 at 07:07 AM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `answers` (
   `question_id` int(11) NOT NULL,
   `choice_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=95 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=128 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `answers`
@@ -131,7 +131,40 @@ INSERT INTO `answers` (`answer_id`, `question_id`, `choice_id`, `user_id`) VALUE
 (91, 6, 2, 1),
 (92, 15, 1, 1),
 (93, 16, 2, 1),
-(94, 19, 1, 1);
+(94, 19, 1, 1),
+(95, 16, 2, 1),
+(96, 1, 2, 1),
+(97, 1, 1, 1),
+(98, 3, 1, 1),
+(99, 6, 1, 1),
+(100, 2, 3, 1),
+(101, 12, 1, 1),
+(102, 13, 1, 1),
+(103, 1, 2, 1),
+(104, 1, 1, 1),
+(105, 3, 1, 1),
+(106, 6, 1, 1),
+(107, 2, 3, 1),
+(108, 12, 1, 1),
+(109, 13, 1, 1),
+(110, 1, 2, 1),
+(111, 1, 1, 1),
+(112, 1, 1, 1),
+(113, 3, 1, 1),
+(114, 6, 2, 1),
+(115, 15, 1, 1),
+(116, 16, 2, 1),
+(117, 19, 2, 1),
+(118, 20, 2, 1),
+(119, 1, 1, 1),
+(120, 3, 2, 1),
+(121, 6, 1, 1),
+(122, 2, 4, 1),
+(123, 7, 2, 1),
+(124, 8, 1, 1),
+(125, 9, 2, 1),
+(126, 11, 1, 1),
+(127, 1, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -163,17 +196,27 @@ INSERT INTO `choices` (`choice_id`, `choice_text`) VALUES
 CREATE TABLE IF NOT EXISTS `faqs` (
   `faq_id` int(11) NOT NULL,
   `faq_timestamp` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `faq_category` varchar(20) NOT NULL,
   `faq_question` varchar(1000) NOT NULL,
   `faq_answer` varchar(1000) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `faqs`
 --
 
-INSERT INTO `faqs` (`faq_id`, `faq_timestamp`, `faq_question`, `faq_answer`) VALUES
-(1, '2015-08-08 18:48:52', 'How can we cure HIV?', 'HIV stands for human immunodeficiency virus. This is the virus that causes AIDS. There is no cure ye'),
-(2, '2015-08-08 18:57:53', 'What is chlamydia?', 'Most people who have chlamydia don''t have any signs or symptoms. Women with symptoms may have abnormal discharge (fluid) from the vagina, burning when they urinate (pee), or pain during sex. Men with symptoms may have abnormal discharge from the penis or burning when they urinate.');
+INSERT INTO `faqs` (`faq_id`, `faq_timestamp`, `faq_category`, `faq_question`, `faq_answer`) VALUES
+(1, '2015-08-08 18:48:52', 'STDs', 'How can we cure HIV?', 'HIV stands for human immunodeficiency virus. This is the virus that causes AIDS. There is no cure ye'),
+(2, '2015-08-08 18:57:53', 'STDs', 'What is chlamydia?', 'Most people who have chlamydia don''t have any signs or symptoms. Women with symptoms may have abnormal discharge (fluid) from the vagina, burning when they urinate (pee), or pain during sex. Men with symptoms may have abnormal discharge from the penis or burning when they urinate.'),
+(3, '2015-08-08 21:01:39', 'STDs', 'What is sexually transmitted disease?', 'Some people that have HIV, hepatitis B, or an STD do not feel sick. Knowing if you have one of these diseases is important. If you do, talk to your doctor about how you can reduce the chance that your baby will become sick. Learn more about STDs.'),
+(4, '2015-08-08 21:01:39', 'STDs', 'Is there a cure on sexually transmitted diseases?', 'Yes. These STDs can be cured with medicine if they are treated early. If these STDs aren''t treated, they can cause serious health problems, like making it dangerous or impossible for women to get pregnant. If you have an STD, it''s important to get treatment right away.'),
+(5, '2015-08-08 21:03:40', 'STDs', 'What are the symptoms of syphilis?', 'In the first stage, a painless sore appears on the genitals, lips, tongue, or anus. The second stage may include a rash on the palms of the hands and soles of the feet, sores in the throat or mouth, fever, or patchy hair loss. Tell your doctor if you have any of these symptoms of syphilis.'),
+(6, '2015-08-08 21:03:40', 'Contraceptives', 'What is a condom?', 'It is safe, effective, and recommended for girls 11 and 12 years of age with a catch-up through age 26 for those who have not yet been vaccinated or completed the vaccine series to protect against the types of HPV that cause most cervical cancers. Use a new condom every time you have anal, vaginal, or oral sex. Correct and consistent use of the male latex condom is highly effective in reducing transmission of sexually transmitted infections. The most reliable way to avoid infection is to not have sex (i.e., anal, vaginal or oral).'),
+(7, '2015-08-09 00:26:59', 'Myths/Misconceptions', 'If I have sex while standing, will I get pregnant? Someone told me that the sperms can''t swim upward.', 'No. You will get pregnant. That is a misconception.'),
+(8, '2015-08-09 00:26:59', 'STDs', 'What are the home remedies for yeast infection?', 'I have found reducing sugar intake and eating yogurt effective.'),
+(9, '2015-08-09 00:26:59', 'Myths/Misconceptions', 'I peed inside a girl''s vagina. Will she get sick?', 'It depends. Urine is sterile, however, if the person urinating carries an STD, it is possible to pass on illnesses like chlamydia and gonorrhea.'),
+(10, '2015-08-09 00:26:59', 'Myths/Misconceptions', 'Are two condoms better than one? (At the same time, I mean.)', 'No! The friction between the two condoms greatly increases the chances of them ripping.'),
+(11, '2015-08-09 00:26:59', 'Contraceptives', 'Condoms are expensive. Can I wash them with soap and water then reuse them?', 'No. Latex condoms are very fragile, and are often weakened after the first use. Use a new latex condom after each round of sex! ');
 
 -- --------------------------------------------------------
 
@@ -184,7 +227,7 @@ INSERT INTO `faqs` (`faq_id`, `faq_timestamp`, `faq_question`, `faq_answer`) VAL
 CREATE TABLE IF NOT EXISTS `questions` (
   `question_id` int(11) NOT NULL,
   `question_text` varchar(50) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `questions`
@@ -294,12 +337,22 @@ INSERT INTO `questions_choices` (`question_id`, `choice_id`) VALUES
 
 CREATE TABLE IF NOT EXISTS `users` (
   `user_id` int(11) NOT NULL,
-  `user_email` int(11) NOT NULL,
+  `user_name` varchar(50) NOT NULL,
   `user_lat` double NOT NULL,
   `user_lon` double NOT NULL,
-  `user_score` int(11) NOT NULL,
-  `user_number` int(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `user_number` varchar(30) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `user_name`, `user_lat`, `user_lon`, `user_number`) VALUES
+(1, 'Frank Rayo', 0, 0, ''),
+(2, 'Frank Rayo', 0, 0, '639057297409'),
+(3, 'Frank Rayo', 0, 0, '639057297409'),
+(4, 'Frank Rayo', 0, 0, '9057297409'),
+(5, 'Frank Rayo', 0, 0, '9057297409');
 
 --
 -- Indexes for dumped tables
@@ -333,8 +386,7 @@ ALTER TABLE `questions`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`user_id`),
-  ADD UNIQUE KEY `user_number` (`user_number`);
+  ADD PRIMARY KEY (`user_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -344,7 +396,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `answers`
 --
 ALTER TABLE `answers`
-  MODIFY `answer_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=95;
+  MODIFY `answer_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=128;
 --
 -- AUTO_INCREMENT for table `choices`
 --
@@ -354,17 +406,17 @@ ALTER TABLE `choices`
 -- AUTO_INCREMENT for table `faqs`
 --
 ALTER TABLE `faqs`
-  MODIFY `faq_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `faq_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `question_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=24;
+  MODIFY `question_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
