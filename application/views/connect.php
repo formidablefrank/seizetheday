@@ -1,3 +1,18 @@
+<!-- include jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  $('#question').keyup(function(){
+  	 var $ques = $('.ques');
+  	 $ques = $(this).val();
+  	 if ($ques == '') {
+  	 	$ques = 'Type in a question above.';
+  	 }
+     $('#connect-query').text($ques);
+  });
+});
+</script>
+
 <!-- content topmenu -->
 <div class="ui large fixed secondary sticky menu ontop">
 	<div class="ui container">
@@ -47,7 +62,7 @@
 			<!-- input field for bluemix query -->
 			<form id="connect-form" action="" method="GET">
 				<div class="ui fluid large action input">
-					<input placeholder="Ask a question here..." type="text">
+					<input id="question" placeholder="Ask a question here..." type="text">
 					<button type="submit" class="ui large blue right labeled icon button">
 						<i class="comments icon"></i>
 						Ask
