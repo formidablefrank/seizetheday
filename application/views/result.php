@@ -38,19 +38,29 @@
     </div>
 </div>
 
-<h1><?php echo $result; ?></h1>
-<p>
+<!-- set description based on result -->
 <?php
-if($result == 'consult'){ echo 'Consult a doctor right away!'; }
-else if($result == 'healthy'){ echo 'You are healthy. No need to worry.'; }
-else if($result == 'chlamydia'){ echo 'Consult a doctor right away!'; }
-else if($result == 'HIV'){ echo 'Description'; }
-else if($result == 'gonorrhea'){ echo 'Consult a doctor right away!'; }
-else if($result == 'scabies'){ echo 'Consult a doctor right away!'; }
-else if($result == 'pubic lice'){ echo 'Consult a doctor right away!'; }
-else if($result == 'yeast'){ echo 'Consult a doctor right away!'; }
-else if($result == 'herpes'){ echo 'Consult a doctor right away!'; }
-else if($result == 'syphilis'){ echo 'Consult a doctor right away!'; }
-else if($result == 'warts'){ echo 'Consult a doctor right away!'; }
+if($result == 'consult'){ $desc = 'Consult a doctor right away!'; }
+else if($result == 'healthy'){ $desc = 'You are healthy! However, if you have any worries, have yourself checked.'; }
+else if($result == 'chlamydia'){ $desc = "Chlamydia is one of the most common STD's. It is also easily cured. Visit a clinic!"; }
+else if($result == 'HIV'){ $desc = 'It is possible that you have HIV. Have yourself checked!'; }
+else if($result == 'gonorrhea'){ $desc = 'If left untreated, gonorrhea can cause infertility. Consult a doctor right away!'; }
+else if($result == 'scabies'){ $desc = 'Scabies can and will spread to other parts of your skin if left untreated. Go to a doctor.'; }
+else if($result == 'pubic lice'){ $desc = 'Getting rid of your pubic hair is not enough. Get checked! Special creams may be perscribed.'; }
+else if($result == 'yeast'){ $desc = 'People who eat a lot of sugar have higher risks of getting yeast infections. Eating yogurt and acidic food may help, but it is best to visit a doctor if you have worries.'; }
+else if($result == 'herpes'){ $desc = 'It is possible that you have herpes. Go to a doctor! It is very contagious.'; }
+else if($result == 'syphilis'){ $desc = 'Syphilis can lead to death if untreated. Have it checked now!'; }
+else if($result == 'warts'){ $desc = 'You have genital warts! They are causes by the Human Pappiloma Virus (HPV). Have it checked!'; }
 ?>
+
+<!-- display result -->
+<h1 align="center">RESULT</h1>
+
+<div id="content-identify" class="ui centered card">
+    <div class="content">
+        <div class="header" style="text-align:center"><?php echo $result; ?></div>
+    </div>
+    <div class="extra content" ><p style="text-align:center"><?php echo $desc; ?></p></div>
+</div>
+<p>
 </p>
