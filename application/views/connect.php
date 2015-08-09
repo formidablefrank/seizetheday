@@ -154,7 +154,9 @@ $(function(){
 
 		<!-- schedule form: contact details -->
 		<div class="ui basic inverted form segment">
-			<h3 class="section header"><i class="phone icon"></i> Contact Details</h3>
+			<h3 class="section header">
+				<i class="phone icon"></i> Contact Details
+			</h3>
 			<p>Please provide your contact details.
 				You will be contacted once you have been scheduled for an appointment.</p>
 			<div class="two fields">
