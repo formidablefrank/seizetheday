@@ -59,10 +59,9 @@
 <div id="homepage-subhead-identify" class="homepage-subhead">
 	<div class="ui grid container">
 		<div class="ten wide column">
-			<h1>Identify</h1>
-			<p>Minions ipsum wiiiii bappleees bananaaaa butt me want bananaaa!
-			La bodaaa. Bee do bee do bee do jiji jeje po kass jiji poopayee gelatooo.
-			Daa daa tank yuuu! Bappleees baboiii hahaha jeje me want bananaaa! Tank yuuu!</p>
+			<h1>Connect</h1>
+			<p>Get instant consultations using our virtual doctor. If that is not enough,
+			create appointments with local clinics. Recieve confirmation via SMS.</p>
 		</div>
 		<div class="six wide column">
 		</div>
@@ -74,23 +73,16 @@
 		<div class="six wide column">
 		</div>
 		<div class="ten wide column">
-			<h1>Study</h1>
-			<p>Minions ipsum butt bananaaaa jeje daa aaaaaah potatoooo hahaha.
-			Belloo! baboiii bee do bee do bee do pepete poopayee. Belloo! la bodaaa butt pepete.
-			Wiiiii belloo! Bee do bee do bee do daa. Tulaliloo uuuhhh gelatooo daa chasy
-			tatata bala tu uuuhhh bee do bee do bee do aaaaaah.</p>
+			<h1>Seek</h1>
+			<p>Read already answered questions and learn about sex!</p>
 		</div>
 	</div>
 </div>
 <div id="homepage-subhead-connect" class="homepage-subhead">
 	<div class="ui grid container">
 		<div class="ten wide column">
-			<h1>Connect</h1>
-			<p>Minions ipsum me want bananaaa! Chasy ti aamoo!
-			Tatata bala tu gelatooo po kass bananaaaa wiiiii.
-			Uuuhhh hana dul sae bappleees bee do bee do bee do ti aamoo! Pepete poulet tikka masala.
-			Tatata bala tu bee do bee do bee do hana dul sae pepete bappleees
-			uuuhhh poulet tikka masala chasy. Tulaliloo daa pepete hana dul sae tulaliloo poopayee.</p>
+			<h1>Identify</h1>
+			<p>Do you think you have an STD? We will help you see if you need a doctor.</p>
 		</div>
 		<div class="six wide column">
 		</div>
