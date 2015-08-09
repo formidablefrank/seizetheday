@@ -96,7 +96,7 @@ $(document).ready(function(){
 					for (var i = results.length - 1; i >= 0; i--) {
 						var resultTemplate =
 							"<div class='ui result segment'>" +
-								"<span class='ui red ribbon label'>Category</span>" +
+								"<span class='ui red ribbon label'>" + results[i].faq_category +"</span>" +
 								"<span><span class='ui header'>" +
 									results[i].faq_question +
 								"</span></span>" +
