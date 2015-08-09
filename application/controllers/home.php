@@ -89,10 +89,44 @@ class Home extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
-	public function answer(){
+	public function appointment(){
 		if($this->input->post()){
+			$name = $this->input->post('name');
+			$number = $this->input->post('number');
+			//$msgid = $this->user->addUser($name, $number);
 
+	        $arr_post_body = array(
+	            "message_type" => "SEND",
+	            "mobile_number" => $number,
+	            "shortcode" => "29290469148",
+	            "message_id" => 1,
+	            "message" => "Good morning " . $name . "! For walk-in consultations, you can visit Dr. X at Room 123 Hospital Y, Quezon City from 2pm-5pm. Thank you so much and SeizeTheDay!",
+	            "client_id" => "f3be0f5b7d2abc0ce6fc0dccf7ecc049272af5679fbf5a547429cbaddb0391ff",
+	            "secret_key" => "36718d987648bb0e46b32dcff3c751d7c445453091dcf4079c7662b6cad653d0"
+	        );
+
+	        $query_string = "";
+	        foreach($arr_post_body as $key => $frow)
+	        {
+	            $query_string .= '&'.$key.'='.$frow;
+	        }
+
+	        $URL = "https://post.chikka.com/smsapi/request";
+
+	        print_r($query_string);
+	        $curl_handler = curl_init();
+	        print_r($curl_handler);
+	        curl_setopt($curl_handler, CURLOPT_URL, $URL);
+	        curl_setopt($curl_handler, CURLOPT_POST, count($arr_post_body));
+	        curl_setopt($curl_handler, CURLOPT_POSTFIELDS, $query_string);
+	        curl_setopt($curl_handler, CURLOPT_RETURNTRANSFER, TRUE);
+	        $responseasd = curl_exec($curl_handler);
+	        print_r($responseasd);
+	        print_r("asfdghkjsdfgjhldfslghsfdjsfdhlg");
+	        curl_close($curl_handler);
+	        exit(0);
 		}
+		redirect('/');
 	}
 
 	function result_table($query){
