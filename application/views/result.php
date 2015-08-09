@@ -54,11 +54,13 @@ else if($result == 'warts'){  $result = 'Those might be genital warts.'; $desc =
 ?>
 
 <!-- display result -->
-<div id="content-identify" class="ui centered card">
-    <div class="content">
+<div class="ui text container">
+    <div id="content-identify" class="ui centered segments">
+    <div class="ui segment">
         <div class="header" style="text-align:center"><h1><?php echo $result; ?></h1></div>
     </div>
-    <div class="extra content" ><h3 style="text-align:center"><?php echo $desc; ?></h3></div>
+    <div class="ui segment" ><h3 style="text-align:center"><?php echo $desc; ?></h3></div>
+</div>
 </div>
 <p>
 </p>
