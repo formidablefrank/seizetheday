@@ -17,7 +17,7 @@ $(function(){
 <div class="ui large fixed secondary sticky menu ontop">
 	<div class="ui container">
 		<a href="<?php echo base_url('home') ?>" class="item">
-			<i class="heart icon"></i>
+			<img src="<?php echo base_url('img/seizetheday-logo.svg'); ?>" class="ui mini image">
 		</a>
 		<a href="<?php echo base_url('home/connect') ?>" class="active item">
 			Connect
