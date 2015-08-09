@@ -7,15 +7,15 @@
 				<i class="heart icon"></i> Seize the Day
 			</a>
 			<div class="right menu">
-				<button class="ui facebook button">
+				<button class="ui basic blue button">
 					<i class="facebook icon"></i>
 					Facebook
 				</button>
-				<button class="ui twitter button">
+				<button class="ui basic teal button">
 					<i class="twitter icon"></i>
 					Twitter
 				</button>
-				<button class="ui google plus button">
+				<button class="ui basic red button">
 					<i class="google plus icon"></i>
 					Google Plus
 				</button>
