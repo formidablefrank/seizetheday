@@ -54,11 +54,13 @@ else if($result == 'warts'){ $desc = 'You have genital warts! They are causes by
 ?>
 
 <!-- display result -->
+<h1 align="center">RESULT</h1>
+
 <div id="content-identify" class="ui centered card">
     <div class="content">
-        <div class="header"><?php echo $result; ?></div>
+        <div class="header" style="text-align:center"><?php echo $result; ?></div>
     </div>
-    <div class="extra content"><?php echo $desc; ?></div>
+    <div class="extra content" ><p style="text-align:center"><?php echo $desc; ?></p></div>
 </div>
 <p>
 </p>
