@@ -14,9 +14,18 @@
 			Identify
 		</a>
 		<div class="right menu">
-			<div class="item">
-				Social links
-			</div>
+			<button class="ui facebook button">
+					<i class="facebook icon"></i>
+					Facebook
+				</button>
+				<button class="ui twitter button">
+					<i class="twitter icon"></i>
+					Twitter
+				</button>
+				<button class="ui google plus button">
+					<i class="google plus icon"></i>
+					Google Plus
+				</button>
 		</div>
 	</div>
 </div>

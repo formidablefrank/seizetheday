@@ -45,7 +45,7 @@ class Question extends CI_Model{
                     [0, "yeast", 20, 0, 0],
                     [0, 21, "consult", 0, 0],
                     [0, "herpes", 22, 0, 0],
-                    [0, "syph", "warts", 0, 0]
+                    [0, "syphilis", "warts", 0, 0]
                   ];
         return $lookup[$qnum][$ans];
     }
