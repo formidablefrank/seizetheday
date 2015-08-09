@@ -19,7 +19,6 @@
 					<i class="google plus icon"></i>
 					Google Plus
 				</button>
-
 			</div>
 		</div>
 	</div>
@@ -104,9 +103,8 @@
 		<span class="heading ah"><b>AngelHacks 2015</b></span>
 		<div class="ui divider"></div>
 		<span class="content">
-			<b>Seize the Day</b> ·
 			<a href="https://github.com/formidablefrank/seizetheday" class="footer-link">GitHub Repository</a> ·
-			<a href="" class="footer-link">Hackathon.io Page</a>
+			<a href="http://www.hackathon.io/seizetheday-std" class="footer-link">Hackathon.io Page</a>
 		</span>
 	</div>
 </div>
