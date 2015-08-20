@@ -43,7 +43,7 @@
 <div id="content-identify" class="ui huge center aligned header">
 	<?php echo $question->question_text; ?>
 </div>
-
+<br/><br/>
 <!-- Display yes and no buttons -->
 <div class="ui stackable centered grid container">
 

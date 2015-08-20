@@ -147,7 +147,7 @@ $(function(){
 				</div>
 				<div class="ten wide field">
 					<label>Field of Concern</label>
-					<input type="text" name="field" placeholder="Possible cardiorespiratory issue">
+					<input type="text" name="field" placeholder="Issues / concerns">
 				</div>
 			</div>
 		</div>
@@ -197,7 +197,7 @@ $(function(){
 			$.ajax({
 				url: "https://post.chikka.com:443/smsapi/request",
 				type: "POST",
-				data: "&message_type=SEND&mobile_number=63"+ $('#number').val() +"&shortcode=29290469148&message_id=123142&message=Good morning " + $('#name').val() +"! For walk-in consultations, you can visit Dr. X at Room 123 Hospital Y, Quezon City from 2pm-5pm. Thank you so much and SeizeTheDay!&client_id=f3be0f5b7d2abc0ce6fc0dccf7ecc049272af5679fbf5a547429cbaddb0391ff&secret_key=36718d987648bb0e46b32dcff3c751d7c445453091dcf4079c7662b6cad653d0",
+				data: "&message_type=SEND&mobile_number=63"+ $('#number').val() +"&shortcode=29290469148&message_id=1231425&message=Good morning " + $('#name').val() +"! For walk-in consultations, you can visit Dr. X at Room 123 Hospital Y, Quezon City from 2pm-5pm. Thank you so much and SeizeTheDay!&client_id=f3be0f5b7d2abc0ce6fc0dccf7ecc049272af5679fbf5a547429cbaddb0391ff&secret_key=36718d987648bb0e46b32dcff3c751d7c445453091dcf4079c7662b6cad653d0",
 				dataType: "json",
 				success: function(result){
 					console.log('yeahuhh');
