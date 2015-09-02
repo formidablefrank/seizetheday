@@ -103,11 +103,4 @@
 			<a href="http://www.hackathon.io/seizetheday-std" class="footer-link">Hackathon.io Page</a>
 		</span>
 	</div>
-	<br/>
-	<div
-	    class="fb-like"
-	    data-send="true"
-	    data-width="450"
-	    data-show-faces="true">
-	</div>
 </div>
