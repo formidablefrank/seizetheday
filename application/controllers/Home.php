@@ -60,7 +60,6 @@ class Home extends CI_Controller {
 			foreach ($results as $result) {
 				$values = $values . $result->faq_id . ',' . $result->faq_question . ',' . $result->faq_answer . ' ; ';
 			}
-			// echo $values;
 			echo json_encode($results);
 		}
 		else{

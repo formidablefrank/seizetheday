@@ -111,12 +111,3 @@
 	    data-show-faces="true">
 	</div>
 </div>
-
-
-<!-- // temporarily comment out for faster local loading
-<script src="http://js.api.here.com/se/2.5.4/jsl.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript" src="<?php echo base_url('js/map.js'); ?>"></script>
--->
-<!-- TODO: store lat and lon in session var -->
-
-<!-- <script type="text/javascript" src="<?php echo base_url('js/fbshare.js'); ?>"></script> -->
