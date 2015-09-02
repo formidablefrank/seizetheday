@@ -15,7 +15,7 @@
 					<i class="twitter icon"></i>
 					Twitter
 				</button>
-				<button class="ui basic red button">
+				<button class="ui basic blue button">
 					<i class="google plus icon"></i>
 					Google Plus
 				</button>
