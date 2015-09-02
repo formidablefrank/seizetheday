@@ -119,4 +119,4 @@
 -->
 <!-- TODO: store lat and lon in session var -->
 
-<script type="text/javascript" src="<?php echo base_url('js/fbshare.js'); ?>"></script>
+<!-- <script type="text/javascript" src="<?php echo base_url('js/fbshare.js'); ?>"></script> -->
