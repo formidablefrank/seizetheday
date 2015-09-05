@@ -1,8 +1,8 @@
 Header edit Set-Cookie (.*) "$1; HTTPOnly;"
 Header set X-Frame-Options DENY
 # Options
-Options -Multiviews
-Options +FollowSymLinks
+# Options -Multiviews
+# Options +FollowSymLinks
 
 #Enable mod rewrite
 RewriteEngine On
